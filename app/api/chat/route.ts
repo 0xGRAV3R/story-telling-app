@@ -4,11 +4,11 @@ import { openai } from '@ai-sdk/openai';
 export const runtime = "edge";
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
+  const { messages, temperature } = await req.json();
 
-  const response = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
-    stream: true,
+  const response = streamText({
+    model: openai("gpt-4o-mini"),
+    temperature: temperature,
     messages: [
       {
         role: "system",
@@ -18,6 +18,5 @@ export async function POST(req: Request) {
     ],
   });
 
-  const stream = OpenAIStream(response);
-  return new StreamingTextResponse(stream);
+  return response.toDataStreamResponse();
 }
