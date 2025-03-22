@@ -1,5 +1,9 @@
 "use client";
 
+import { useState } from "react";
+import { useChat } from "@ai-sdk/react";
+
+
 export default function Chat() {
   return (
     <main className="mx-auto w-full p-24 flex flex-col">
