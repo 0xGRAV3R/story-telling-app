@@ -5,6 +5,8 @@ import { useChat } from "@ai-sdk/react";
 
 
 export default function Chat() {
+  const { messages, append, isLoading } = useChat();
+  
   return (
     <main className="mx-auto w-full p-24 flex flex-col">
       <div className="p4 m-4">
