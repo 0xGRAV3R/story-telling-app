@@ -19,7 +19,21 @@ export default function Chat() {
     { emoji: "😂", value: "Funny" },
   ];
 
+  const [state, setState] = useState({
+    genre: "",
+    tone: "",
+  });
   
+  const handleChange = ({
+    target: { name, value },
+  }: React.ChangeEvent<HTMLInputElement>) => {
+    setState({
+      ...state,
+      [name]: value,
+    });
+  };
+
+
   
 
 
