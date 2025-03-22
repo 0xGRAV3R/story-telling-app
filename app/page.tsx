@@ -96,7 +96,18 @@ export default function Chat() {
             </div>
           </div>
 
-          {/* button code */}
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
+            disabled={isLoading || !state.genre || !state.tone}
+            onClick={() =>
+              append({
+                role: "user",
+                content: `Generate a ${state.genre} story in a ${state.tone} tone`,
+              })
+            }
+          >
+            Generate Story
+          </button>
 
           {/* chat messages code */}
         </div>
