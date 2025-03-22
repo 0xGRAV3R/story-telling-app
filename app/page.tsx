@@ -6,7 +6,23 @@ import { useChat } from "@ai-sdk/react";
 
 export default function Chat() {
   const { messages, append, isLoading } = useChat();
+  const genres = [
+    { emoji: "🧙", value: "Fantasy" },
+    { emoji: "🕵️", value: "Mystery" },
+    { emoji: "💑", value: "Romance" },
+    { emoji: "🚀", value: "Sci-Fi" },
+  ];
+  const tones = [
+    { emoji: "😊", value: "Happy" },
+    { emoji: "😢", value: "Sad" },
+    { emoji: "😏", value: "Sarcastic" },
+    { emoji: "😂", value: "Funny" },
+  ];
+
   
+  
+
+
   return (
     <main className="mx-auto w-full p-24 flex flex-col">
       <div className="p4 m-4">
