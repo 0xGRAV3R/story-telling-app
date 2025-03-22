@@ -1,5 +1,8 @@
 ## Story Telling AI App 
 
+npm install ai
+npm i @ai-sdk/openai
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
