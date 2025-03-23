@@ -8,6 +8,8 @@ Creating an Application for Storytelling using NextJS and a local API for text g
 - [x] npm i @ai-sdk/openai
 - [x] Add a .env.local file with key from your openai api below:
 OPENAI_API_KEY=
+- [x] npm install
+- [x] npm run dev
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
