@@ -109,7 +109,15 @@ export default function Chat() {
             Generate Story
           </button>
 
-          {/* chat messages code */}
+          <div
+            hidden={
+              messages.length === 0 ||
+              messages[messages.length - 1]?.content.startsWith("Generate")
+            }
+            className="bg-opacity-25 bg-gray-700 rounded-lg p-4"
+          >
+            {messages[messages.length - 1]?.content}
+          </div>
         </div>
       </div>
     </main>
